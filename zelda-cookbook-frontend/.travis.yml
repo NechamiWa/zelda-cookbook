@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- node
+script:
+- npm test
+- npm run build
+notifications:
+  email: false
+deploy:
+  provider: surge
+  project: ./build/
+  domain: zelda-cookbook.surge.sh
+  skip-cleanup: true

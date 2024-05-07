@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecipeContainer renderRecipes should match the snapshot if there are no recipes to render 1`] = `
+<div
+  id="loading"
+>
+  <h1>
+    No Recipe Found!
+    <img
+      alt="Dubious Food"
+      src="DubiousFood.png"
+    />
+  </h1>
+</div>
+`;
+
+exports[`RecipeContainer renderRecipes should match the snapshot when it renders ingredients 1`] = `
+Array [
+  <RecipeCard
+    id={1}
+    ingredient1="Apple"
+    ingredient1_id={2}
+    ingredient2={null}
+    ingredient2_id={null}
+    ingredient3={null}
+    ingredient3_id={null}
+    ingredient4={null}
+    ingredient4_id={null}
+    ingredient5={null}
+    ingredient5_id={null}
+    name="Baked Apple"
+    type="none"
+/>,
+  <RecipeCard
+    id={2}
+    ingredient1="Apple"
+    ingredient1_id={2}
+    ingredient2="Tabantha Wheat"
+    ingredient2_id={3}
+    ingredient3="Cane Sugar"
+    ingredient3_id={4}
+    ingredient4="Goat Butter"
+    ingredient4_id={5}
+    ingredient5={null}
+    ingredient5_id={null}
+    name="Apple Pie"
+    type="Restore Hearts"
+/>,
+]
+`;
+
+exports[`RecipeContainer should match the snapshot 1`] = `
+<div
+  id="all-recipe-container"
+>
+  <RecipeCard
+    id={1}
+    ingredient1="Apple"
+    ingredient1_id={2}
+    ingredient2={null}
+    ingredient2_id={null}
+    ingredient3={null}
+    ingredient3_id={null}
+    ingredient4={null}
+    ingredient4_id={null}
+    ingredient5={null}
+    ingredient5_id={null}
+    key="1"
+    name="Baked Apple"
+    type="none"
+  />
+  <RecipeCard
+    id={2}
+    ingredient1="Apple"
+    ingredient1_id={2}
+    ingredient2="Tabantha Wheat"
+    ingredient2_id={3}
+    ingredient3="Cane Sugar"
+    ingredient3_id={4}
+    ingredient4="Goat Butter"
+    ingredient4_id={5}
+    ingredient5={null}
+    ingredient5_id={null}
+    key="2"
+    name="Apple Pie"
+    type="Restore Hearts"
+  />
+</div>
+`;

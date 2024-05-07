@@ -1,0 +1,62 @@
+.Filter {
+  margin: 30px 0 0; }
+
+.search-bar {
+  font-size: 1.4em;
+  width: 240px;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 0; }
+
+.search-bar__ingredient {
+  display: inline-block;
+  position: relative; }
+
+.filter__category {
+  font-family: fantasy, 'sans-serif';
+  letter-spacing: 1px;
+  text-align: left;
+  font-size: 1.5em;
+  color: #EDE5CB; }
+
+.submit-button {
+  font-size: 1.4em;
+  border: 1px solid black; }
+
+.search-results__container {
+  width: 300px;
+  border: 1px solid black;
+  display: none;
+  position: absolute;
+  max-height: 260px;
+  overflow: scroll; }
+
+.search-results__containter--show {
+  display: block; }
+
+.search-results__item {
+  margin: 0;
+  padding: 15px;
+  font-size: 1.4em;
+  background-color: rgba(255, 255, 255, 0.9); }
+  .search-results__item:hover {
+    background-color: gray;
+    font-weight: bold; }
+
+.NameFilter,
+.IngredientTag,
+.EffectFilter {
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  align-items: center; }
+
+.button__clear-filter {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  font-size: 20px;
+  color: #1c3744;
+  text-align: center; }
+
+.button__clear-filter--hidden {
+  display: none; }
