@@ -9,8 +9,8 @@ services:
       - "postgresql"
     ports:
       - "3000:3000"
-    # environment:
-    #   - DB_URL="postgres://postgres:postgres@z_backend:5432/zelda_cookbook"
+    environment:
+      - DATABASE_URL="postgres://postgres:postgres@z_backend:5432/zelda_cookbook"
     networks:
       - backend-network
       - frontend-network
