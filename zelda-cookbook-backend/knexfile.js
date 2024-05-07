@@ -3,7 +3,7 @@
 module.exports = {
   development: {
     client: 'postgresql',
-    connection: 'postgres://postgres:postgres@localhost:5432/zelda_cookbook',
+    connection: 'postgres://postgres:postgres@zelda_cookbook:5432/zelda_cookbook',
     migrations: {
       directory: './db/migrations'
     },
@@ -15,7 +15,7 @@ module.exports = {
 
   test: {
     client: 'postgresql',
-    connection: 'postgres://postgres:postgres@localhost:5432/zelda_cookbook',
+    connection: 'postgres://postgres:postgres@zelda_cookbook:5432/zelda_cookbook',
     migrations: {
       directory: './db/migrations'
     },
