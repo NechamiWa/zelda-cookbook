@@ -8,7 +8,7 @@ services:
     depends_on:
       - "postgresql"
     ports:
-      - "3000:3001"
+      - "3001:3000"
     environment:
       - DATABASE_URL="postgres://postgres:postgres@zelda_cookbook:5432/zelda_cookbook"
     networks:
