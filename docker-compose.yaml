@@ -1,5 +1,19 @@
 services:
 
+  backend:
+    image: zelda_backend
+    build:
+      context: ./zelda-cookbook-backend
+    container_name: z_backend
+    depends_on:
+      - "postgresql"
+    ports:
+      - "3000:3000"
+    # environment:
+    #   - DB_URL="postgres://postgres:postgres@z_backend:5432/zelda_cookbook"
+    networks:
+      - backend-network
+
   postgresql:
     image: postgres:12-alpine3.19
     container_name: zelda_cookbook
@@ -7,12 +21,17 @@ services:
     ports: 
       - "5432:5432"
     environment:
-      - POSTGRES_DB=admin
-      - POSTGRES_PASSWORD=pass123
-      - POSTGRES_USER=admin
-      - PGDATA=/var/lib/postgresql/data/pgdata
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=zelda_cookbook
     volumes:
-      - pgdata:/var/lib/postgresql/data/pgdata
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - backend-network
 
 volumes:
   pgdata:
+
+networks:
+  backend-network:
+    driver: bridge
